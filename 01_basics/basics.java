@@ -12,3 +12,4 @@ public class basics {
         sc.close(); // Close the scanner to prevent resource leak
     }
 }
+                                // //////////////////////////////////////////
