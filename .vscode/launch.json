@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "conditional",
+            "request": "launch",
+            "mainClass": "conditional",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "leapyaer",
+            "request": "launch",
+            "mainClass": "conditionalcode.leapyaer",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "Divisible_NUMBER",
+            "request": "launch",
+            "mainClass": "Divisible_NUMBER",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "jdk",
+            "request": "launch",
+            "name": "Launch Java App"
+        }
+    ]
+}
