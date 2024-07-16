@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "evenorodd",
+            "request": "launch",
+            "mainClass": "evenorodd",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "basics",
+            "request": "launch",
+            "mainClass": "basics",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "SumOfTwoInputs",
+            "request": "launch",
+            "mainClass": "SumOfTwoInputs",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "CalculateSimple",
+            "request": "launch",
+            "mainClass": "CalculateSimple",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "volumeOfSphere",
+            "request": "launch",
+            "mainClass": "volumeOfSphere",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "areaOfACircle",
+            "request": "launch",
+            "mainClass": "areaOfACircle",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "ArthmeticOperator",
+            "request": "launch",
+            "mainClass": "ArthmeticOperator",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "variables",
+            "request": "launch",
+            "mainClass": "variables",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
+            "name": "leapyaer",
+            "request": "launch",
+            "mainClass": "leapyaer",
+            "projectName": "JAVACODING_220e0bf8"
+        },
+        {
+            "type": "java",
             "name": "conditional",
             "request": "launch",
             "mainClass": "conditional",

@@ -1,4 +1,4 @@
-package conditionalcode;
+// package conditionalcode;
 
 import java.util.Scanner;
 
