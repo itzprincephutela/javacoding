@@ -7,7 +7,7 @@ public class Compposite {
                 if(n%i==0){
                 System.out.println("Composite Number");
                     break;
-                }
+                }//new line
                 else
             System.out.println("Prime");
             break;
