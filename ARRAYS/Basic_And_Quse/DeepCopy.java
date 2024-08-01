@@ -20,8 +20,6 @@ public class DeepCopy {
                 
             }
 
-
-
             System.out.println();
             for(int ele :arr){         //For each Loops
                 System.out.print(ele+" ");
