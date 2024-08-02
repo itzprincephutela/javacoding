@@ -1,5 +1,3 @@
-
-
 public class Spiral {
     public static void print(int[][] arr) {
         int m =arr.length;
