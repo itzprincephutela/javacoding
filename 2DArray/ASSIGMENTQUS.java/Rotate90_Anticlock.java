@@ -1,4 +1,6 @@
-public class A_90Degree {
+
+
+public class Rotate90_Anticlock {
     public static void print(int[][] arr) {
         int m =arr.length;
         int n =arr[0].length;
@@ -10,12 +12,23 @@ public class A_90Degree {
         }
         System.out.println();
         }
-public static void main(String[] args) {
-    int[][] arr = {{1,2,3},{3,4,5},{5,6,7}};
-        int m =arr.length;
-        int n =arr[0].length;
+    public static void main(String[] args) {
+        int[][]arr = {{1,2,3},{4,5,6},{7,8,9}};
+        int n = arr.length;
+        int m = arr[0].length;
+       //reverse
+         for(int i = 0 ; i < m;i++){
+            int a = 0;
+            int b = m-1;
+            int temp = arr[i][a];
+            arr[i][a]=arr[i][b];
+            arr[i][b]=temp;
+            a++;b--;
+        }
         print(arr);
-// transpose
+
+        //transpose 
+
         for(int i =0 ; i < m ; i++){
             for (int j = 0; j < i; j++) {
                 int temp = arr[i][j];
@@ -24,16 +37,6 @@ public static void main(String[] args) {
             }
         }
         print(arr);
-
        
-        for(int i = 0 ; i < m ; i++){
-        for(int j = n-1 ; j>=0;j-- ){
-            System.out.print(arr[i][j]+" ");
-                 }
-    
-        }           
-        
-}
-
-
+    }
 }
