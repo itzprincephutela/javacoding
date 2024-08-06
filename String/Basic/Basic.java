@@ -11,7 +11,7 @@ Scanner sc = new Scanner(System.in);
 // System.out.println(s);
 
 // Fuction in Sring 
-// charat();
+// char at ();
 String str = "Prince Kumar is the best";
 System.out.println("Char At (3) : "+str.charAt(3));// n
 //length()
@@ -65,12 +65,12 @@ System.out.println(op);//hiz
 
 
 //integer to string fuction
-System.out.println("Enter the number : ");
-int num =sc.nextInt();
+// System.out.println("Enter the number : ");
+// int num =sc.nextInt();
 
-String strr =Integer.toString(num);
-System.out.println(strr);
-System.out.println(strr.length());
+// String strr =Integer.toString(num);
+// System.out.println(strr);
+// System.out.println(strr.length());
 
 //String are mutables
 
@@ -83,8 +83,27 @@ String q = "Prince"; // this is aslo use a shallow copy in java
 String r = new String("Prince");
 
 
+// equal and ==
+  String e= "abcdxyz";
+  String f= "abcd";
+  f = f +"xyz";
+  System.out.println(e);
+  System.out.println(f);
+  System.out.println(e==f);// why this is given false;  because they are checking adressing;
+  System.out.println(e.equals(f));// true  //we can aslo use compare to
+  System.out.println(e.compareTo(f));// 0  
 
 
+  //String to arr
+  
+  String[] arr = {"123","432","0"};
+  int mx = Integer.MIN_VALUE;
+  for(int i=0 ; i <arr.length ; i++){
+    int n = Integer.parseInt(arr[i]);
+    mx = Math.max(mx,n);
+  }
+System.out.println(mx);
 
+  
 }
 }
