@@ -15,7 +15,6 @@ public class Reverse {
             i++;
             j--;
         }
-         
         System.out.println(str.toString());
     }
 }
