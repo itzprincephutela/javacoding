@@ -5,6 +5,7 @@ public class Parametrized{
           Default(int a , int b){
              x = a;
              y = b ;
+             
          }
          void add(){
              System.out.println(x+y);

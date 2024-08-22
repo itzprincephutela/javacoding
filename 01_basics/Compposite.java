@@ -16,3 +16,4 @@ public class Compposite {
              if(n==1)System.out.println("Niether prime or composite");
     }
 }
+ 
