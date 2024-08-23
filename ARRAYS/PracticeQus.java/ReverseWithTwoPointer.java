@@ -25,7 +25,8 @@ public class ReverseWithTwoPointer {
         }
         System.out.println();
         }
-        public static void swap(int[] arr,int start ,int end){
+
+    public static void swap(int[] arr,int start ,int end){
             int temp = arr[start];
             arr[start]=arr[end];
             arr[end]=temp;

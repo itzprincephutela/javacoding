@@ -14,7 +14,6 @@ public class MergeTwoArray {
         while(i < arr1.length && j< arr2.length ){
             if(arr1[i]<=arr2[j]){
                 arr3[k]=arr1[i];
-                
                 i++;
             }
 
