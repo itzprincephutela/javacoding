@@ -10,12 +10,15 @@ public class A_90Degree {
         }
         System.out.println();
         }
+
 public static void main(String[] args) {
     int[][] arr = {{1,2,3},{3,4,5},{5,6,7}};
         int m =arr.length;
         int n =arr[0].length;
         print(arr);
 // transpose
+
+
         for(int i =0 ; i < m ; i++){
             for (int j = 0; j < i; j++) {
                 int temp = arr[i][j];
@@ -23,9 +26,11 @@ public static void main(String[] args) {
                 arr[j][i]=temp;
             }
         }
+
         print(arr);
 
        
+        
         for(int i = 0 ; i < m ; i++){
         for(int j = n-1 ; j>=0;j-- ){
             System.out.print(arr[i][j]+" ");

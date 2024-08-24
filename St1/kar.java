@@ -17,8 +17,6 @@
 //         }
 //     }}
 
-
-
 //     ///////////////////////////////bits 
 //  import java.util.*;
 // public class bit{
@@ -153,4 +151,3 @@
 //             System.out.println("NOO");
 //         }
 //     }
-// }

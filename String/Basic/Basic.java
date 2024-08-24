@@ -10,7 +10,7 @@ Scanner sc = new Scanner(System.in);
 // String s = sc.next();//input
 // System.out.println(s);
 
-// Fuction in Sring 
+// Fuction in String 
 // char at ();
 String str = "Prince Kumar is the best";
 System.out.println("Char At (3) : "+str.charAt(3));// n
