@@ -149,6 +149,7 @@
 //         if(sum==num)System.out.println("YES");
 //         else{
 //             System.out.println("NOO");
+//             System.out.println("NOO");
 //         }
 //     }
-//     }
+//     
