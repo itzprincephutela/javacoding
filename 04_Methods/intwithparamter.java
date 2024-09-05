@@ -1,4 +1,4 @@
-class Calculator{
+class Calculator{//instance
     int a ;
     int b ;
     int sum;
