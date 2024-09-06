@@ -1,0 +1,233 @@
+*******************************************************************************************************************
+
+Pillars of OOP (Object-Oriented Programming)
+===========================================
+
+1. Data Hiding
+   ------------
+   - Achieved using the `private` access modifier.
+   - Restricts access to class members from outside the class.
+   
+   Example:
+   --------
+   class People {
+       private String name;
+       private int age;
+   }
+
+2. Abstraction
+   ------------
+   - Implemented using `abstract` classes and `interfaces`.
+   - Hides the implementation details and exposes only essential functionalities.
+
+   Example:
+   --------
+   abstract class Animal {
+       abstract void sound();
+   }
+   class Dog extends Animal {
+       void sound() {
+           System.out.println("Barks");
+       }
+   }
+
+3. Encapsulation
+   --------------
+   - Combines Data Hiding and Abstraction.
+   - Wraps data (fields) and code (methods) into a single unit, called a class.
+
+   Example:
+   --------
+   class Person {
+       private String name;
+       private int age;
+
+       // Getter methods
+       public String getName() {
+           return name;
+       }
+       public int getAge() {
+           return age;
+       }
+   }
+
+4. Polymorphism
+   -------------
+   - Polymorphism means "many forms".
+   - Achieved through method overloading and method overriding.
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+Inheritance in Java
+===================
+- The process where a class acquires the properties and behaviors of another class.
+- **Types of Inheritance:**
+  1. IS-A (Using `extends` keyword)
+  2. HAS-A (Composition: Declaring a reference variable inside another class)
+
+Example:
+--------
+class People {
+    private String name;
+    private int age;
+}
+
+class Student extends People {
+    private int marks;
+    private String grade;
+}
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+Constructor in Java
+===================
+- A constructor is a special method with the same name as the class.
+- It does not have a return type and is automatically called when an object is created.
+
+Types of Constructors:
+----------------------
+1. No-argument (default) constructor
+2. Parameterized constructor
+
+Example:
+--------
+class Student {
+    String name;
+    int age;
+
+    // No-argument constructor
+    Student() {
+        name = "John";
+        age = 18;
+    }
+
+    // Parameterized constructor
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+}
+*******************************************************************************************************************
+*******************************************************************************************************************
+Types of Variables in Java
+==========================
+
+1. Local Variable
+   --------------
+   - Declared inside a method.
+   - Stored in stack memory.
+   - No default value (must be initialized).
+
+   Example:
+   --------
+   class Calculator {
+       public void add(int a, int b) {
+           int result = a + b;  // Local variable
+           System.out.println("Sum: " + result);
+       }
+   }
+
+2. Instance Variable
+   -----------------
+   - Declared inside the class but outside methods.
+   - Stored in heap memory.
+   - Has default values based on the data type.
+
+   Example:
+   --------
+   class Student {
+       String name;  // Instance variable
+       int age;
+   }
+
+3. Static Variable
+   ---------------
+   - Declared with the `static` keyword inside the class but outside methods.
+   - Shared among all instances of the class.
+
+   Example:
+   --------
+   class Bank {
+       static float interestRate = 9.5f;  // Static variable
+   }
+
+
+Primitive vs Reference Variables
+================================
+1. Primitive Type
+   --------------
+   - Holds the actual value.
+   - Example: `int a = 10;`
+
+2. Reference Type
+   ---------------
+   - Holds the reference (memory address) of an object.
+   - Example: `Student sd = new Student();`
+
+
+
+Polymorphism in Java
+====================
+1. Static Polymorphism (Method Overloading)
+   ----------------------------------------
+   - Occurs when two or more methods in the same class have the same name but different parameters.
+   - Binding happens at compile time (Compile-time binding).
+
+   Example:
+   --------
+   class Calculator {
+       public void add(int a, int b) {
+           System.out.println("int int");
+       }
+       public void add(float a, float b) {
+           System.out.println("float float");
+       }
+   }
+
+2. Dynamic Polymorphism (Method Overriding)
+   ----------------------------------------
+   - Occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+   - Binding happens at runtime (Runtime binding).
+
+   Example:
+   --------
+   class Animal {
+       void sound() {
+           System.out.println("Animal sound");
+       }
+   }
+   class Dog extends Animal {
+       void sound() {
+           System.out.println("Barks");
+       }
+   }
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+Method Overloading
+==================
+- A class can have multiple methods with the same name but different parameter lists.
+- This is called method overloading.
+- It is an example of Static Polymorphism (Compile-time binding).
+
+Example:
+--------
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public int add(int... numbers) {  // Var-args
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+}
+

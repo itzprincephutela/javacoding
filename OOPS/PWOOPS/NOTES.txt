@@ -1,0 +1,194 @@
+Pillars Of OOPS
+1 DataHiding  ====> private access Modifier
+2 Abstraction ====> abstract Class and interface
+3 Encapcsulation ====>Encapcsulation = DataHiding + Abstraction
+4 Polymorphism  ====> inheritence
+
+
+#inheritence 
+=>the process of acquring the property and bheviours of one class is called inheritence
+=>In,java inheritence can be archived in 2 forms 
+a . IS - A(using extends Keyword)
+b . HAS - A(Declaration  one ref Variable inside another class)
+
+Example ===>
+
+BASEclass/Parent Class /Superclass
+class People {
+   private String name;
+   private  int age;
+   private  String address;
+}
+/Derived class or Subclass or child Class
+class Student extends People {
+    private  int marks;
+    private  String grade;
+}
+
+
+
+# What is Constructor ?
+Ans - > Constructor is method , which has got the same name as a classname 
+while a writing a  Constructor, we should not keep return type of Keyword
+Constructor call automatically At the time when object Creation
+
+
+
+# how many type of Constructor?
+Ans - > a. 0 type Constructor
+b. parameterized Constructor
+
+
+Qus.-> how many type of Variable in java
+a => local = Variable Declarated in method Class is local variable
+b => instance = Variable Declared  inside the class but outside of the method 
+c=> static Variable = Variable Declared inside the class but outside of the method with static Keyword
+
+
+local => :memory in Stack area ,No defaut value  ,memory initialize at the time ,
+class Calculator {
+  // Add is Method and we declared var inside a Method 
+    public void add(int a, int b) {
+        int result = a + b;
+        System.out.println("The Sum : " + result);
+    }
+}
+public class LOCAL {
+
+    public static void main(String[] args) {
+        Calculator cal = new Calculator();
+        cal.add(10, 20);
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Static ==>
+
+
+class Loan_APP {
+
+    //Static variable
+    static float rateOfIntrest = 9.5f;
+
+}
+
+public class Static {
+
+    public static void main(String[] args) {
+        System.out.println(Loan_APP.rateOfIntrest);
+    }
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#instance
+
+==> memory in heap area ;
+===>defaut value depending on datatype 
+
+class Student  {
+    //instance variabel************************main point*********************** defaut value jha mille 
+    String name;
+    int age;
+    String address;
+    int marks;
+    String grade;
+
+    // Constructor to initialize the fields
+    public Student(String name, int age, String address, int marks, String grade) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.marks = marks;
+        this.grade = grade;
+    }
+    //Normal Method 
+    // Method to display the details
+    public void display() {  
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + grade);
+    }
+}
+////////////////////////////////////////////////////////////////////////
+
+Based on the type of value holded by variables are 2 type 
+1 is primitive => int a = 10;
+2 is Refrenced => Student sd = new Student();
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                        Polymorphism
+    QUS -> WHAT IS Polymorphism 
+    ANS IS POLY MEANS - MANY
+        MORPHISM MEAN -FORMS
+                                        ARE 2 TYPES
+    1 . Static Polymorphism ==> Method OVERLOADING 
+                          EG  ==> Method Hiding
+
+    2 . DYANAMIC Polymorphism ==>
+                                EG=>Method OVERRIDING 
+
+
+Method OVERLOADING 
+++++++++++++++++++++++++++++++++++++
+TWO METHOD IS SAID TO BE OVERLOADED ,IF BOTH THE METHOD HAVE SAME NAME BUT DIFFERENT ARGUMENTS TYPES.
+In case of MethodOverloading ,compiler Will bind call to the method to the body of the method .
+Jvm Should just Execute the method body, so we say MethodOverloading as "ComplieTimeBinding/Early TimeBinding"
+One Person Doing Multiple Job (False)
+
+
+
+
+CLASS Calculator{
+    public void add(int a ,int b){
+        System.out.println("int int argument");
+    }
+    public void add(float a ,float b){
+        System.out.println("float float argument");
+    }
+    public void add(Double a ,Double b){
+        System.out.println("Double Double argument");
+    }
+
+}
+
+
+
+///////////////////////////////////
+ var - args
+ Example=>
+ class Calculator {
+    
+    // Method for adding two integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method for adding three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Method using varargs to add any number of integers var , args
+    public int add(int... numbers) {
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2.Method Hiding
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+B => DYANAMIC Polymorphism 
+   1. OVERRIDING(abstract and interface class)
+    
