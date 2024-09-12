@@ -2,7 +2,7 @@
 class Calculator {
     // Add is Method and we declared var inside a Method 
 
-    ic void add(int a, int b) {
+    public  void add(int a, int b) {
 
     int result = a + b ;
 

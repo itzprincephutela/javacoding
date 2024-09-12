@@ -1,8 +1,26 @@
+Access Modifier ==>
+public => Member can accessible from any class of any package
+private => Member cannot be assesd from outsite the class body 
+protected=>Member can accessible from any class of oun package but can't private
+default => (NOt A KeyWord) default is when we did't write any thing public private or protected
+
+
 Pillars Of OOPS
 1 DataHiding  ====> private access Modifier
-2 Abstraction ====> abstract Class and interface
+2 Abstraction ====> abstract Class and interface class
 3 Encapcsulation ====>Encapcsulation = DataHiding + Abstraction
 4 Polymorphism  ====> inheritence
+
+Object in java 
+is only made by new keyword 
+Box b1;                       b1 is not a object
+b1 = new Box()                b1 is Refrence Variable 
+
+Box  b1 = new Box()
+
+
+
+
 
 
 #inheritence 
@@ -43,7 +61,7 @@ b. parameterized Constructor
 
 
 Qus.-> how many type of Variable in java
-a => local = Variable Declarated in method Class is local variable
+a => local = Variable Declarated in method and Class is local variable
 b => instance = Variable Declared  inside the class but outside of the method 
 c=> static Variable = Variable Declared inside the class but outside of the method with static Keyword
 
@@ -66,12 +84,16 @@ public class LOCAL {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Static ==>
-
+Static ==>  Static Memeber means it  belong to the type (class) itself and Not to the instance of that type
+Static Keyword can be used in java as
+Static Memeber Variables or static Variable
+Static Method
+Static blocks
+Static class(Nested Class)
 
 class Loan_APP {
-
-    //Static variable
+    int x ; //instance variable
+    //Static variable  or class variable are by defaut initialize to its defaut variable
     static float rateOfIntrest = 9.5f;
 
 }
@@ -79,10 +101,21 @@ class Loan_APP {
 public class Static {
 
     public static void main(String[] args) {
+        Loan_APP L = new Loan_APP();
         System.out.println(Loan_APP.rateOfIntrest);
     }
 
 }
+
+you can excess with static variable with class or object name
+
+Loan_APP.rateOfIntrest
+l.rateOfIntrest
+
+
+
+
+Static Member=> 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -194,4 +227,336 @@ CLASS Calculator{
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 B => DYANAMIC Polymorphism 
    1. OVERRIDING(abstract and interface class)
+   during inheritence , the parent class method implementation would not match the need of child class 
+   so child class will take method name ,but it will change the implementation as per need 
+
+
+
+   class Parent{
+    public void property(){
+        System.out.println("paisa");
+    }
+    public void marrige(){
+        System.out.println("Relative GF");
+    }
+   }
+   class Child{
+        public void marrige(){
+            System.out.println("Any GF");
+        }
+   }
     
+Example=>
+
+class Plane {
+
+    public void takeOff() {
+        System.out.println("Plane take off");
+    }
+
+    public void fly() {
+        System.out.println("Plane fly");
+    }
+
+    public void land() {
+        System.out.println("Plane land");
+    }
+}
+
+class Passenger_Plane extends Plane {
+
+    @Override
+    public void takeOff() {
+        System.out.println("Passenger_Plane take off");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("Passenger_Plane fly");
+    }
+
+    @Override
+    public void land() {
+        System.out.println("Passenger_Plane land");
+    }
+}
+
+class Cargo_Plane extends Plane {
+
+    @Override
+    public void takeOff() {
+        System.out.println("Cargo_Plane take off");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("Cargo_Plane fly");
+    }
+
+    @Override
+    public void land() {
+        System.out.println("Cargo_Plane land");
+    }
+}
+
+class Airport {
+
+    public void Allowplane(Plane p) {
+        p.takeOff();
+        p.fly();
+        p.land();
+    }
+}
+
+public class Overriding {
+
+    public static void main(String[] args) {
+        Passenger_Plane p1 = new Passenger_Plane();
+        Cargo_Plane c1 = new Cargo_Plane();
+        Plane p = new Plane();  // Declare a plane object
+
+        Airport a = new Airport();
+
+        // Allow planes to perform their operations
+        a.Allowplane(p1);  // Allow Passenger_Plane
+        a.Allowplane(c1);  // Allow Cargo_Plane
+        a.Allowplane(p);   // Allow regular Plane
+    }
+}
+
+private<defaut<protrcted<public
+
+
+
+////////////////////////////////////////////
+Final 
+
+
+class parent{
+    public final void methodOne(){
+        //it mean you can't Override 
+        System.out.println("Method One");
+    }
+}
+class CHILD{
+    public void methodOne(){
+        System.out.println("Method Child)//not use becasus final keyword is use in top
+    }
+}
+
+
+/////////////////////////////////////////////
+abstract 
+
+
+
+class abstract` parent{
+    public abstract void methodOne(){
+        //abstract it mean you can't use the methodOne functionality but you can use method 
+        System.out.println("Method One");
+    }
+}
+class CHILD{
+    public void methodOne(){
+        System.out.println("Method Child)//not use becasus abstrxt keyword is use in parent class 
+        if they use abstract keyword in method automatically class will be abstract
+    }
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+In  Java Abstraction can be Achieved using 
+a -> abstract Class 
+b -> interface
+In real World for few case object should not be Created , to handle in java we need go for a Keyword  called "Abstraction"
+
+
+abstract access Modifier =>
+1 Class =  yes we can use in class , but if we can make class as abstrxt then object can't be initialize
+2 Method = yes we can use in class , but if we can make Method  as abstract then body can't give body for method
+3 Variable = no we can't abstract at variable
+
+Example For abstract Class
+Rule ===:>
+#agar aao kisi bi method ko abstract krte ho to apko class ko bi abstract krna pdhe ga 
+abstract Exposing the set of Service but Hiding the internal implementation
+
+# for An abstract class we can created a reference , but not the object 
+
+
+/////////////////////////////////////////////////////////////////
+Super 
+
+
+abstract class person {
+    String name ;
+    int age ;
+    float height;
+
+    person(String name,int age ,float height){
+        this.name=name;
+        this.age=age;
+        this.height=height;
+    }
+}
+//to call parameterized Constructor of parent from child class
+class Student extends person{
+    int marks ;
+    float avg;
+    Student(String name ,int age,float height, int marks,float avg){
+        Super(name,age,height);
+        this.marks = marks;
+        this.avg=avg;
+    }
+    public void display(){
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(height);
+        System.out.println(marks);
+        System.out.println(avg);
+    }
+}
+public class Test{
+    public static void main(){
+        Student student = new Student("prince",19,6.1f,100,100.0f);
+        student.display();
+    }
+}
+
+
+
+Qus-> can we create an object from abstract class
+ans -> No
+
+QUS->When will the Constructor gets called?
+Ans-> During the Creation Of an object
+
+QUS->Does abstract class has Constructor?
+Ans->yes
+
+Qus->why we need Constructor is abstract class , when we can't instantiate an object
+ans-> To get the property of parent class to child class  we need Constructor in abstract class also  .
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+If You Want Interface in code 
+
+
+
+Basic Example =>
+interface ICalculator
+{
+    //public abstract
+    void add(int a,int b);
+    void sub(int a,int b);
+    void mul(int a,int b);
+    void div(int a,int b);
+}
+
+Interface Should be Implemented by Class
+Which Ever Class is implements an interface that class should compulsoriy give the body for all the abstract method present in the interface
+=> if the implementation class fails to give the body for atleast one abstract method then that class would  be become abstract
+
+interface ICalculator
+{
+    //public abstract
+    void add(int a,int b);
+    void sub(int a,int b);
+    void mul(int a,int b);
+    void div(int a,int b);
+}
+abstract class CalculatorImp implements ICalculator{
+
+     public void add(int a ,int b){
+        Syso(a+b);
+    }
+    
+    public void sub(int a ,int b){
+        Syso(a-b);
+    }
+}
+
+extend vs implements
+++++++++++++++++++++++++++++++++++++++++++++++
+a . A class can extend only from one class at a time
+ex ->
+class one{
+    public void method(){}
+}
+class two extends one {
+    public void methodTwo(){}
+}
+b.-> A interface can many interface from implementation 
+ex -> 2 
+
+interface Calculator{
+    int add(int a , int b);
+    int sub(int a ,int b );
+}
+
+interface  CalculatorAdvance{
+    int mul(int a,int b);
+    int div(int a,int b);
+}
+
+class CalculatorImp implements Calculator,CalculatorAdvance{
+    public void add(int a ,int b){
+        Syso(a+b);
+    }
+    
+    public void sub(int a ,int b){
+        Syso(a-b);
+    }
+
+}
+
+
+
+class - > interface   ===> implementation
+class - > class       ===> extends
+interface - > interface===> extends
+
+
+interface you can write a variable yes //public static final 
+example = > 
+inteface sound {
+    int max = 0;
+    int  min  = 0;
+}
+
+
+if static use nameclass name 
+interface Idemo{
+    int x = 10
+}
+public class Test implementation Idemo{
+    public static void main(){
+        int x = 100;
+        System.out.println(x);
+        System.out.println(Idemo.x);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Package ==>
+are nothing  more than the way we organize file into different directories according to their functionality,usability as well 
+as category they should belong too
+
+
+if we do from trminal command is 
+javac helloworld.java
+javac -d . helloworld.java //to  create package
