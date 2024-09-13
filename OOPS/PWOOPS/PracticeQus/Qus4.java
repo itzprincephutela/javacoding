@@ -6,7 +6,7 @@ public class Qus4 {
         E.setSalary(10000000);
         System.out.println(E.geteName()+E.getempId()+E.getSalary());
     }
-}
+}   
 
 
 class Employee{

@@ -58,6 +58,28 @@ Constructor call automatically At the time when object Creation
 # how many type of Constructor?
 Ans - > a. 0 type Constructor
 b. parameterized Constructor
+c.Copy Constructor
+
+
+Example of Cunstructor
+
+class Student {
+    private int roll ;
+    private String Name;
+
+    public Student(){// this zero or default Cunstructor
+    Syso
+    }
+
+    public Student (int x ){
+        Syso // this is a parameterized
+    }
+
+    public Student (Student s){//Copy Cunstructor
+        roll = s.roll;
+        name = s.name;
+    }
+}
 
 
 Qus.-> how many type of Variable in java
@@ -150,6 +172,33 @@ class Student  {
         System.out.println("Grade: " + grade);
     }
 }
+
+
+
+
+
+
+
+in instance we aslo have initialized blocks
+we know that the value of insatnce variable is zero in defaut 
+so  we use this for example =>
+class Student{
+    private int rollno ;
+    public Student() {
+        SYSO("HELOO WORLD ")
+    }
+    public void setroll(int r){
+        rollno =r;
+    }
+    {
+        rollno = 5;
+    }
+}
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////
 
 Based on the type of value holded by variables are 2 type 

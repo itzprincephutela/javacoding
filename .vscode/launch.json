@@ -1,0 +1,90 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Constructor",
+            "request": "launch",
+            "mainClass": "Constructor",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
+            "type": "java",
+            "name": "Copy_constructor",
+            "request": "launch",
+            "mainClass": "Copy_constructor",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
+            "type": "java",
+            "name": "Default_Constructor",
+            "request": "launch",
+            "mainClass": "Default_Constructor",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
+            "type": "java",
+            "name": "LOCAL",
+            "request": "launch",
+            "mainClass": "LOCAL",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
+            "type": "java",
+            "name": "Parametrized",
+            "request": "launch",
+            "mainClass": "Parametrized",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
+            "type": "java",
+            "name": "Static",
+            "request": "launch",
+            "mainClass": "Static",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
+            "type": "java",
+            "name": "overloading",
+            "request": "launch",
+            "mainClass": "overloading",
+            "projectName": "JAVACODING_b4279951"
+        }
+    ]
+}
