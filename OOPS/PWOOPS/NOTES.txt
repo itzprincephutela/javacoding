@@ -20,9 +20,6 @@ Box  b1 = new Box()
 
 
 
-
-
-
 #inheritence 
 =>the process of acquring the property and bheviours of one class is called inheritence
 =>In,java inheritence can be archived in 2 forms 
@@ -82,6 +79,25 @@ class Student {
 }
 
 
+Cunstructor inheritence :
+class A{
+        public A(){
+            Syso("a")
+        }
+}
+class B extends A{
+    public B(){
+        super();
+        syso("b")
+    }
+}
+public class test{
+    public static void main(String args[]){
+        B obj = new B();
+    }
+}
+
+
 Qus.-> how many type of Variable in java
 a => local = Variable Declarated in method and Class is local variable
 b => instance = Variable Declared  inside the class but outside of the method 
@@ -126,26 +142,28 @@ public class Static {
         Loan_APP L = new Loan_APP();
         System.out.println(Loan_APP.rateOfIntrest);
     }
-
 }
 
 you can excess with static variable with class or object name
 
 Loan_APP.rateOfIntrest
+
 l.rateOfIntrest
 
-
-
-
-Static Member=> 
+Static Member=> sabse phele vo hi chlte hain  code me 
+Example =>
+Class Box{
+    private static int b ;
+    static{
+        b = 1;
+    }
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #instance
-
 ==> memory in heap area ;
 ===>defaut value depending on datatype 
-
 class Student  {
     //instance variabel************************main point*********************** defaut value jha mille 
     String name;
@@ -172,13 +190,6 @@ class Student  {
         System.out.println("Grade: " + grade);
     }
 }
-
-
-
-
-
-
-
 in instance we aslo have initialized blocks
 we know that the value of insatnce variable is zero in defaut 
 so  we use this for example =>
@@ -194,19 +205,10 @@ class Student{
         rollno = 5;
     }
 }
-
-
-
-
-
 ////////////////////////////////////////////////////////////////////////
-
 Based on the type of value holded by variables are 2 type 
 1 is primitive => int a = 10;
 2 is Refrenced => Student sd = new Student();
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                         Polymorphism
     QUS -> WHAT IS Polymorphism 
@@ -227,11 +229,11 @@ In case of MethodOverloading ,compiler Will bind call to the method to the body 
 Jvm Should just Execute the method body, so we say MethodOverloading as "ComplieTimeBinding/Early TimeBinding"
 One Person Doing Multiple Job (False)
 
-
-
-
 CLASS Calculator{
     public void add(int a ,int b){
+        System.out.println("int int argument");
+    }
+    public void add(int a ,int b,int c){
         System.out.println("int int argument");
     }
     public void add(float a ,float b){
@@ -242,8 +244,6 @@ CLASS Calculator{
     }
 
 }
-
-
 
 ///////////////////////////////////
  var - args
@@ -315,7 +315,7 @@ class Plane {
 class Passenger_Plane extends Plane {
 
     @Override
-    public void takeOff() {
+        public void takeOff() {
         System.out.println("Passenger_Plane take off");
     }
 
@@ -379,8 +379,6 @@ private<defaut<protrcted<public
 
 ////////////////////////////////////////////
 Final 
-
-
 class parent{
     public final void methodOne(){
         //it mean you can't Override 
@@ -400,11 +398,11 @@ abstract
 
 
 class abstract` parent{
-    public abstract void methodOne(){
+    public abstract void methodOne();
         //abstract it mean you can't use the methodOne functionality but you can use method 
-        System.out.println("Method One");
+        
     }
-}
+
 class CHILD{
     public void methodOne(){
         System.out.println("Method Child)//not use becasus abstrxt keyword is use in parent class 
@@ -415,7 +413,6 @@ class CHILD{
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 In  Java Abstraction can be Achieved using 
 a -> abstract Class 
@@ -430,20 +427,18 @@ abstract access Modifier =>
 
 Example For abstract Class
 Rule ===:>
-#agar aao kisi bi method ko abstract krte ho to apko class ko bi abstract krna pdhe ga 
+#agar aap kisi bi method ko abstract krte ho to apko class ko bi abstract krna pdhe ga 
 abstract Exposing the set of Service but Hiding the internal implementation
 
 # for An abstract class we can created a reference , but not the object 
 
-
 /////////////////////////////////////////////////////////////////
 Super 
-
-
 abstract class person {
     String name ;
     int age ;
-    float height;
+    fl
+    oat height;
 
     person(String name,int age ,float height){
         this.name=name;
@@ -475,8 +470,6 @@ public class Test{
     }
 }
 
-
-
 Qus-> can we create an object from abstract class
 ans -> No
 
@@ -489,13 +482,9 @@ Ans->yes
 Qus->why we need Constructor is abstract class , when we can't instantiate an object
 ans-> To get the property of parent class to child class  we need Constructor in abstract class also  .
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 If You Want Interface in code 
-
-
 
 Basic Example =>
 interface ICalculator
@@ -564,12 +553,9 @@ class CalculatorImp implements Calculator,CalculatorAdvance{
 
 }
 
-
-
 class - > interface   ===> implementation
 class - > class       ===> extends
 interface - > interface===> extends
-
 
 interface you can write a variable yes //public static final 
 example = > 
@@ -591,15 +577,6 @@ public class Test implementation Idemo{
     }
 }
 
-
-
-
-
-
-
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Package ==>
 are nothing  more than the way we organize file into different directories according to their functionality,usability as well 
@@ -609,3 +586,32 @@ as category they should belong too
 if we do from trminal command is 
 javac helloworld.java
 javac -d . helloworld.java //to  create package
+
+
+///////////////////////
+this and Super
+
+
+this function is reference of current and parent class and Super only call paerent of class 
+
+
+Class A {
+    public void f1(){
+        System.out.println("F1");
+    }
+
+    int x; //instance
+    public void addfunc(int x){
+        this.x=x        //this.x is instance and x is local 
+    }
+
+}
+Class B{
+     public void f2(){
+        System.out.println("F2");
+        this.f1;
+        this.f2;
+        but Super can call only parent 
+        super.f1()
+    }
+}
