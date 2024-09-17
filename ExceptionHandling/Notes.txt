@@ -1,0 +1,66 @@
+An Execution is an unwanted or unexpected exent , which occurs during the Execution of a program 
+ i.e ->at runtime ,that disrupts the normal flow of the programming
+
+Object is Perent class of Every  class  in java 
+throwables are parent class of Exceptions and Error 
+ Object - > throwables 
+              |
+Exceptions ->          and              Error
+Exceptions Are Also 2 Type 1 is :
+ComplieTimeException || checkedException:
+runtime Exceptions || UnCheckedEception
+
+Error are 1 type :
+runtime Exceptions ||UnCheckedEception:
+
+
+
+
+exception name -> Description ->Stack Trace
+
+to print exception  == .getMessage() =>Get only Description ,
+.toString() =>Description + Exceptions ,
+.printStackTrace() => Description + Exceptions + Stack
+
+
+FOR HANDLE EXCEPTION THERE IS SOME 4-5 METHODS 1 TRY 2 CATCH 3 FINALLY 4 THROW 5 THROWS
+TRY {
+    RISKY CODE
+}
+CATCH(EXCEPTIONCLASSNAME:NAME OF REFRENCE VARIABLE NAME e){
+    e.printStackTrace
+    system.out.println(e.toString())
+    
+}
+
+Finally Block  = it alsways occur whether exception is handled or not 
+Finally
+{
+    //clean up code 
+}
+
+throw
+
+
+class YoungerAgeException extends Exception{
+        YoungerAgeException(String MSG){
+            super(MSG);
+        }
+}
+public class ThrowBasic {
+    public static void main(String[] args) {
+        int age = 16;
+        try{
+            if(age<18){
+                throw new YoungerAgeException("NOTVALID");
+            }
+            else{
+                System.out.println("Valid");
+            }
+        }
+        catch(YoungerAgeException e){
+            e.printStackTrace();
+        }
+      
+    }
+}
