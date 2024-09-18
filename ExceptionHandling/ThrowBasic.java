@@ -1,4 +1,3 @@
-import java.util.*;
 
 class YoungerAgeException extends Exception{
         YoungerAgeException(String MSG){
@@ -14,6 +13,7 @@ public class ThrowBasic {
             }
             else{
                 System.out.println("Valid");
+                
             }
         }
         catch(YoungerAgeException e){
