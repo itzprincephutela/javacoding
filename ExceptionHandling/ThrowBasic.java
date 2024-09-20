@@ -1,24 +1,27 @@
 
-class YoungerAgeException extends Exception{
-        YoungerAgeException(String MSG){
-            super(MSG);
-        }
+class YoungerAgeException extends Exception {
+
+    YoungerAgeException(String MSG) {
+        super(MSG);
+    }
 }
+
 public class ThrowBasic {
+
     public static void main(String[] args) {
         int age = 16;
-        try{
-            if(age<18){
+        try {
+            if (age < 18) {
                 throw new YoungerAgeException("NOTVALID");
-            }
-            else{
+            } else {
                 System.out.println("Valid");
-                
+
             }
-        }
-        catch(YoungerAgeException e){
+        } catch (YoungerAgeException e) {
             e.printStackTrace();
+            e.toString()
+        
         }
-      
+
     }
 }

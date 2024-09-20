@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "ST2",
+            "request": "launch",
+            "mainClass": "ST2",
+            "projectName": "JAVACODING_b4279951"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",

@@ -1,7 +1,4 @@
 // class test extends Thread{
-//     public test(){
-        
-//     }
 //     public void run(){
 //             System.out.println("hi");
 //     }
@@ -12,15 +9,15 @@
 // }
 
 
-// public class test implements Runnable{
-//     public void run(){
-//         System.out.println("HI SEC");
-//     }
-//     public static void main(String[] args) {
-//         test t = new test();
-//         Thread th = new Thread(t);
-//         th.start();
-//     }
-// }
+public class test implements Runnable{
+    public void run(){
+        System.out.println("HI SEC");
+    }
+    public static void main(String[] args) {
+        test t = new test();
+        Thread th = new Thread(t);
+        th.start();
+    }
+}
 
 
