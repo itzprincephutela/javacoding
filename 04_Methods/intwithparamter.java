@@ -3,7 +3,7 @@ class Calculator{//instance
     int b ;
     int sum;
     
-
+//SUM
     int add()
     {
         int a =10;
