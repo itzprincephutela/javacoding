@@ -2,7 +2,7 @@
 public class ArthmeticOperator {
 
     public static void main(String[] args) {
-        //Only int type ??
+        //Only int type ??,
         int x = 50, y = 10;
         System.out.println(x + y);
         System.out.println(x - y);
