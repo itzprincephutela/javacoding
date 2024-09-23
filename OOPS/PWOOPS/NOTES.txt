@@ -58,14 +58,15 @@ b. parameterized Constructor
 c.Copy Constructor
 
 
-Example of Cunstructor
+Example of Constructor
 
 class Student {
     private int roll ;
     private String Name;
 
-    public Student(){// this zero or default Cunstructor
-    Syso
+    public Student(){
+        // this zero or default Cunstructor
+         Syso
     }
 
     public Student (int x ){
@@ -82,13 +83,13 @@ class Student {
 Cunstructor inheritence :
 class A{
         public A(){
-            Syso("a")
+            Syso("a");
         }
 }
 class B extends A{
     public B(){
         super();
-        syso("b")
+        syso("b");
     }
 }
 public class test{
@@ -216,7 +217,7 @@ Based on the type of value holded by variables are 2 type
         MORPHISM MEAN -FORMS
                                         ARE 2 TYPES
     1 . Static Polymorphism ==> Method OVERLOADING 
-                          EG  ==> Method Hiding
+                          EG  ==> Method Hidding
 
     2 . DYANAMIC Polymorphism ==>
                                 EG=>Method OVERRIDING 
@@ -281,7 +282,7 @@ B => DYANAMIC Polymorphism
 
 
 
-   class Parent{
+class Parent{
     public void property(){
         System.out.println("paisa");
     }
@@ -290,6 +291,7 @@ B => DYANAMIC Polymorphism
     }
    }
    class Child{
+    @Override
         public void marrige(){
             System.out.println("Any GF");
         }
@@ -433,12 +435,11 @@ abstract Exposing the set of Service but Hiding the internal implementation
 # for An abstract class we can created a reference , but not the object 
 
 /////////////////////////////////////////////////////////////////
-Super 
+
 abstract class person {
     String name ;
     int age ;
-    fl
-    oat height;
+    float height;
 
     person(String name,int age ,float height){
         this.name=name;
@@ -557,7 +558,8 @@ class - > interface   ===> implementation
 class - > class       ===> extends
 interface - > interface===> extends
 
-interface you can write a variable yes //public static final 
+interface you can write a variable yes 
+//public static final 
 example = > 
 inteface sound {
     int max = 0;

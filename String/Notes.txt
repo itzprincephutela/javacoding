@@ -1,0 +1,67 @@
+To Remove all Special Charactter
+class HelloWorld {
+    public static void main(String[] args) {
+        String str = "HEL@LO@w$o%rl.<>d";
+        String NewString = str.replaceAll("[^a-zA-Z0-9]","");
+        System.out.println(NewString);
+    }
+}
+
+
+
+TO remove all but donest rtemove space
+String NewString =  str.replaceAll("[^a-zA-Z0-9 ]","");
+
+
+to remove duplicate Charactter
+
+
+
+
+
+
+
+
+
+to Sort in Alphabets
+
+
+import java.util.Arrays;  // Required to use the Arrays.sort() method
+
+class HelloWorld {
+    public static void main(String[] args) {
+        StringBuilder s = new StringBuilder("rock");
+       // String s = "rock";              // Initial string
+       
+        char[] arr = s.toString().toCharArray();   // Convert string to char array
+        
+        // Loop to print each character before sorting
+        System.out.println("Before sorting:");
+        for (char e : arr) {            // Corrected loop syntax to iterate over the array
+            System.out.println(e);      // Print each character
+        }
+        
+        // Sorting the array of characters
+        Arrays.sort(arr);               // Sort the char array
+        
+        // Loop to print each character after sorting
+        System.out.println("After sorting:");
+        for (char e : arr) {            // Corrected loop syntax again for the sorted array
+            System.out.println(e);      // Print each sorted character
+        }
+    }
+}
+
+
+
+to reverese
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String s = "rock kumar";
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        System.out.println(sb);
+    }
+}
