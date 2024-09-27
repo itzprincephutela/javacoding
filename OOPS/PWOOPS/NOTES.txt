@@ -1,7 +1,7 @@
 Access Modifier ==>
 public => Member can accessible from any class of any package
 private => Member cannot be assesd from outsite the class body 
-protected=>Member can accessible from any class of oun package but can't private
+protected=> Member can accessible from any class of oun package but can't private
 default => (NOt A KeyWord) default is when we did't write any thing public private or protected
 
 
@@ -17,8 +17,6 @@ Box b1;                       b1 is not a object
 b1 = new Box()                b1 is Refrence Variable 
 
 Box  b1 = new Box()
-
-
 
 #inheritence 
 =>the process of acquring the property and bheviours of one class is called inheritence
@@ -36,13 +34,11 @@ class People {
 }
 
 
-
-/Derived class or Subclass or child Class
+Derived class or Subclass or child Class
 class Student extends People {
     private  int marks;
     private  String grade;
 }
-
 
 
 # What is Constructor ?
@@ -169,8 +165,8 @@ class Student  {
     //instance variabel************************main point*********************** defaut value jha mille 
     String name;
     int age;
-    String address;
     int marks;
+    String address;
     String grade;
 
     // Constructor to initialize the fields
@@ -197,7 +193,7 @@ so  we use this for example =>
 class Student{
     private int rollno ;
     public Student() {
-        SYSO("HELOO WORLD ")
+        SYSO("HELOO  WORLD ")
     }
     public void setroll(int r){
         rollno =r;
@@ -290,7 +286,7 @@ class Parent{
         System.out.println("Relative GF");
     }
    }
-   class Child{
+   class Child extends paerent{
     @Override
         public void marrige(){
             System.out.println("Any GF");

@@ -11,7 +11,7 @@ class thread1 implements Runnable {
             }
 
         }
-    }
+    } 
 
 }
 

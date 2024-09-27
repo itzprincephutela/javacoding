@@ -19,7 +19,7 @@ public class ThrowBasic {
             }
         } catch (YoungerAgeException e) {
             e.printStackTrace();
-            e.toString()
+            e.toString();
         
         }
 
