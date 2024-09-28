@@ -5,7 +5,7 @@ class YoungerAgeException extends Exception {
         super(MSG);
     }
 }
-
+//
 public class ThrowBasic {
 
     public static void main(String[] args) {
