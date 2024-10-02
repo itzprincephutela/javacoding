@@ -14,7 +14,8 @@ public class SecondLargest {
             }
         }
 
-        // Find the second maximum element
+        // Find the second maximum elements
+        
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > smax && arr[i] != max) {
                 smax = arr[i];
