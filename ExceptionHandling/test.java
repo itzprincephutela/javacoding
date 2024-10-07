@@ -19,5 +19,6 @@ public class test implements Runnable{
         th.start();
     }
 }
+add
 
 
