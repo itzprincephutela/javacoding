@@ -1,0 +1,54 @@
+Introduction Of HashMap
+                            HashMap is a dataStructure 
+                            Insert ,Remove ,Search - > TimeComplexity =>O(1);
+    PAIR -> KEY 
+
+
+Insert - >
+
+HashMap<String,Integer> map = new HashMap<>();
+        map.put("Prince",2090);
+        map.put("Raghav",2060);
+        
+
+Contain key And Value
+        System.out.println(map.containsKey("Prince"));
+
+        System.out.println(map.containsValue(2090));
+        
+
+
+in a hash map there can be 2 or more keys with same value ,but keys are unique 
+
+
+Size  to  get  map.size()
+
+
+remove to  remove element in map
+map.remove("Raghav")  
+
+key and value both are removed;
+
+
+map.get  gives the value of that key
+
+
+map.keySet is use for itrrate
+
+
+
+how to itrrate in HashMap
+
+
+for(String key:map.keySet()){
+            System.out.println(key+" "+map.get(key));
+        }
+
+
+for(String key:map.keySet()){
+    val = map.keySet(key);
+            System.out.println(key+" "+val);
+        }
+
+
+        

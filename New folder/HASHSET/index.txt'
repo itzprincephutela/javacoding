@@ -1,0 +1,90 @@
+Introduction to HashSet -> interface / Data Structure
+
+
+Insert ,Remove ,Search  ->    TC=>   O(1);
+
+
+  HashSet<Integer> set = new HashSet<>();
+        set.add(10);
+        set.add(20);
+        set.add(30);
+        set.add(-2);
+        System.out.println(set);
+
+Random Order Output = > [-2, 20, 10, 30]
+
+
+
+Search => 10   in set  if 10 is in Set then print true anotherwise False; 
+set.contains(10);
+ 
+
+Find the Size of Set  
+set.Size();
+
+Remove Integer from Set
+set.Remove();
+
+
+Set to Array =>
+     
+     Object[] arr = set.toArray();
+        for(int i = 0 ; i <arr.length ;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    
+
+
+How To itrate in HashSet
+Using For Each Loop
+
+for (int ele : set){
+    System.out.print(ele+" " );
+}
+
+
+Use Clear to Remove all Element From HashSet
+set.clear();
+
+
+In a HashSet occurence of every Element is One ;
+
+
+Array Input: nums = [1,13,10,12,31]
+Output: 6
+Explanation: After including the reverse of each number, the resulting array is [1,13,10,12,31,1,31,1,21,13]
+Solution - >LEETCODE 2442;
+
+
+
+Input: words = ["cd","ac","dc","ca","zz"]
+Output: 2
+Explanation: In this example, we can form 2 pair of strings in the following way:
+- We pair the 0th string with the 2nd string, as the reversed string of word[0] is "dc" and is equal to words[2].
+- We pair the 1st string with the 3rd string, as the reversed string of word[1] is "ca" and is equal to words[3].
+It can be proven that 2 is the maximum number of pairs that can be formed.
+
+
+
+class Solution {
+    public int maximumNumberOfStringPairs(String[] words) {
+        HashSet<String> set = new HashSet<>();
+        int count = 0;
+        for(int i = 0 ; i < words.length;i++){
+           String ReversedWord = reverse(words[i]);
+           if(set.contains(ReversedWord)){
+            count++;
+           }
+           else{
+            set.add(words[i]);
+           }
+        }
+           return count;
+    }
+    public String reverse(String s){
+        StringBuilder str = new StringBuilder(s);
+        return str.reverse().toString();
+    }
+}
+
