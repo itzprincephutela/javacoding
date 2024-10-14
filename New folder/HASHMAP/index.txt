@@ -9,6 +9,7 @@ Insert - >
 HashMap<String,Integer> map = new HashMap<>();
         map.put("Prince",2090);
         map.put("Raghav",2060);
+        map.get("Raghav");
         
 
 Contain key And Value
@@ -27,10 +28,12 @@ Size  to  get  map.size()
 remove to  remove element in map
 map.remove("Raghav")  
 
+
+
 key and value both are removed;
 
 
-map.get  gives the value of that key
+map.get()  gives the value of that key
 
 
 map.keySet is use for itrrate

@@ -1,0 +1,11 @@
+
+recursion Call itself 
+
+    public static void PI(int n){
+        if(n==1){
+            System.out.println(1);
+            return;
+        }      
+        PI(n-1);
+        System.out.println(n);   
+    }

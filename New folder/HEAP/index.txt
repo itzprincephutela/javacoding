@@ -9,7 +9,21 @@
         System.out.println(pq+" "+pq.peek());
         pq.add(0);
         System.out.println(pq+" "+pq.peek());
-
+        
         forr Adding 
 
 The Element is Added to heap And the minimum element
+
+
+minHeap and ArrayList
+
+
+
+
+
+
+
+
+
+
+
