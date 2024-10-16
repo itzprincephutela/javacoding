@@ -21,3 +21,14 @@
         temp.data =15; // temp =15
         System.out.println(temp.data);//15
         System.out.println(Shallow.data);//15
+
+
+
+
+               Node a = new Node(10);
+        Node b = new Node(20) ;
+        a.next = b;
+        Node temp = a;
+       while(temp!=null)
+        System.out.println(temp.data);
+        temp = temp.next; 
