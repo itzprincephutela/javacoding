@@ -1,4 +1,3 @@
-
 class Node{
     int data;
     Node next;
@@ -66,5 +65,13 @@ public class insert {
         list.insertAtTail(20);
         list.display();
         list.insert(20, 1000);
+        list.insertAtHead(10);
+        list.insertAtHead(5);
+        list.insertAtTail(15);
+        list.insertAtTail(20);
+        list.display();
+        list.insert(20, 1000);
     }
 }
+
+
