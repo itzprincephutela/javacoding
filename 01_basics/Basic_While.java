@@ -9,6 +9,7 @@ public class Basic_While {
                 number/=10;
                 count++;
             }
+    // temp
             System.out.println (count);
         }
 
